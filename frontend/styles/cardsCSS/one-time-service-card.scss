@@ -1,0 +1,126 @@
+.one-time-service-card {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  @include tablet() {
+    width: 91%;
+    flex-direction: row;
+  }
+
+  @include tablet-landscape() {
+    width: 91%;
+  }
+
+  @include desktop() {
+    width: 61%;
+  }
+
+  @include big-desktop() {
+    width: 47%;
+  }
+}
+
+.one-time-service-card .detail {
+  width: 65%;
+  padding: 1rem 2.5rem;
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h3 {
+      font-weight: 400;
+    }
+
+    .price {
+      color: $primary-color;
+      font-size: 1.3rem;
+      line-height: 1.7rem;
+      font-weight: 600;
+    }
+  }
+
+  .content .left {
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid $secondary-color;
+  }
+
+  .content .mid {
+    display: none;
+  }
+
+  @include phone() {
+    width: 100%;
+    padding: 1rem;
+
+    .content {
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    .content .left {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .content .left {
+      flex: 0.3;
+    }
+
+    .content .mid {
+      display: block;
+      width: 1px;
+      background-color: $secondary-color;
+      height: 80px;
+    }
+  }
+}
+
+.one-time-service-card .call-cta {
+  width: 35%;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  @include phone() {
+    width: 100%;
+  }
+
+  button {
+    padding: 0.5rem 0.7rem;
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.4rem;
+
+    a {
+      display: block !important;
+      color: $tertiary-color;
+    }
+  }
+
+  h1 {
+    margin: 0.2rem 0 1rem;
+    color: $tertiary-color;
+  }
+}

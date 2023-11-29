@@ -1,0 +1,12 @@
+@import "./login.scss";
+@import "./sign-up.scss";
+
+.auth-bottom-text {
+  margin: 1rem 0 0;
+
+  a,
+  a:hover {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}

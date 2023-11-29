@@ -1,0 +1,56 @@
+@import "./blog-detail-page.scss";
+
+.blog-page {
+  margin: 2rem 0;
+
+  .header {
+    margin: 0 0 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .blog-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include desktop() {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include big-desktop() {
+      width: 70%;
+    }
+  }
+
+  .show-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    button {
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      width: 45%;
+      cursor: pointer;
+      background-color: $primary-color;
+      color: #fff;
+      width: fit-content;
+    }
+
+    @include tablet-landscape() {
+      button {
+        margin: 0 0.5rem;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+}

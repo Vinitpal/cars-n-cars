@@ -1,0 +1,153 @@
+.service-card {
+  width: 90%;
+  cursor: default;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  @include tablet() {
+    width: 45%;
+  }
+
+  @include tablet-landscape() {
+    width: 45%;
+  }
+
+  @include desktop() {
+    width: 30%;
+  }
+
+  @include big-desktop() {
+    width: 23%;
+  }
+}
+
+.service-card {
+  .image-container {
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+
+    .package-title {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      h2 {
+        color: $tertiary-color;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}
+
+.service-card .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 2rem;
+
+  .standard {
+    padding-right: 2rem;
+    margin-right: 2rem;
+    border-right: 1px solid $secondary-color;
+  }
+
+  .standard,
+  .premium {
+    h3 {
+      font-size: 1.3rem;
+      line-height: 1.7rem;
+      font-weight: 700;
+    }
+
+    .price {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: $primary-color;
+
+      span {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        font-weight: 600;
+      }
+    }
+
+    .features {
+      margin: 1rem 0;
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+      }
+    }
+
+    .cta-btn {
+      padding: 0.5rem 0.7rem;
+      background-color: $secondary-color;
+      color: $tertiary-color;
+      border: none;
+      outline: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1.4rem;
+    }
+  }
+}
+
+.service-card.alter-service-card {
+  .content {
+    padding: 1rem 0.5rem 1.5rem;
+  }
+
+  .content .premium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .content .premium .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .content .premium .features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 0;
+    height: 100px;
+
+    p {
+      width: 40%;
+    }
+  }
+
+  .content .premium .cta-btn {
+    margin: 0;
+    width: 50%;
+  }
+}
+
+.service-card-form-modal {
+  .input-container.date-time {
+    label {
+      margin-bottom: 1rem;
+    }
+  }
+}

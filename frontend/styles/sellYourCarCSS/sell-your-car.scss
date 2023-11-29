@@ -1,0 +1,102 @@
+@import "./seller-form.scss";
+@import "./car-detail-form.scss";
+@import "./submitted.scss";
+.sell-your-car {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+}
+
+.sell-your-car .header {
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+
+  a.active {
+    color: $primary-color;
+  }
+}
+
+.sell-your-car .how-it-work {
+  text-align: center;
+  margin: 2rem 0;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+  }
+
+  .steps-container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .step {
+      width: 33%;
+    }
+  }
+}
+
+.steps-container .step {
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@include phone() {
+  .sell-your-car {
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .steps-container .step {
+    width: 100% !important;
+  }
+
+  .seller-form .seller-form-container {
+    padding: 1rem;
+  }
+
+  .sell-your-car .header {
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+}

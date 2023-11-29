@@ -1,0 +1,76 @@
+.form-container.sign-up {
+  .input-container {
+    margin: 1rem 0;
+  }
+}
+
+.form-container .ant-form-item-control {
+  width: 100% !important;
+}
+
+.form-container.verify-otp {
+  @include tablet-landscape() {
+    form {
+      width: 70% !important;
+    }
+  }
+
+  form .otp-header {
+    margin: 0 !important;
+    font-size: 1rem;
+  }
+
+  form {
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    a.active {
+      color: $primary-color;
+    }
+  }
+
+  form .input-container {
+    margin: 2rem 0 0;
+  }
+
+  form p {
+    margin: 0.5rem 0 0;
+  }
+
+  form p span {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}
+
+.form-container.sign-up {
+  .ant-radio-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-radio-button-wrapper {
+    width: 50%;
+    text-align: center;
+    margin-right: 1rem;
+    font-weight: 400 !important;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .ant-radio-button-wrapper-checked {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color !important;
+    color: #fff !important;
+  }
+}

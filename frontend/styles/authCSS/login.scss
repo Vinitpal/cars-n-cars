@@ -1,0 +1,98 @@
+.form-container {
+  margin: 2rem 0;
+  padding: 2rem 0;
+
+  @include tablet-landscape() {
+    padding: 3rem 2rem 0;
+  }
+}
+
+.form-container .header {
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+
+  a.active {
+    color: $primary-color;
+  }
+}
+
+.form-container {
+  width: 100%;
+  margin: 2rem auto;
+  border: 1px solid $tertiary-color;
+  box-shadow: 0 0 0.5rem 0.5rem $tertiary-color;
+
+  @include tablet-landscape() {
+    width: 70%;
+  }
+}
+
+.form-container form {
+  border: 1px solid $border-color;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
+
+  .ant-row {
+    text-align: left;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  @include tablet-landscape() {
+    width: 50% !important;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+    label {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .ant-input-number-lg,
+    input {
+      width: 100%;
+    }
+  }
+
+  button {
+    text-align: center;
+    outline: none;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding: 0.5rem 0;
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border-color: $primary-color;
+    font-weight: 600;
+    width: 50%;
+    margin: 2rem auto 0;
+
+    @include phone() {
+      width: 90%;
+    }
+  }
+}

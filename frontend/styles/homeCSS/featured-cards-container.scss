@@ -1,0 +1,125 @@
+.featured-cards-container {
+  width: 85%;
+  margin: 2rem auto;
+  position: relative;
+
+  .header {
+    margin: 0 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .featured-cards-wrapper {
+    height: 470px;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 1rem 0rem;
+  }
+
+  @include desktop() {
+    width: 87%;
+  }
+
+  @include big-desktop() {
+    width: 89%;
+  }
+}
+
+.carousal-arrow {
+  position: absolute;
+  border: none !important;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousal-left {
+  top: 50%;
+  left: -7%;
+
+  @include desktop() {
+    left: -3%;
+  }
+}
+
+.carousal-right {
+  top: 50%;
+  right: -7%;
+
+  @include desktop() {
+    right: -3%;
+  }
+}
+
+.border-pc {
+  @include tablet-landscape() {
+    border: 1px solid $border-color;
+    padding: 1rem;
+  }
+}
+
+.sort-by-price {
+  margin: 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  @include phone() {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    gap: 0rem;
+  }
+}
+
+.sort-by-price {
+  span {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    margin-bottom: 1rem;
+  }
+
+  .active {
+    background-color: $secondary-color;
+    color: $tertiary-color;
+  }
+}
+
+.bike-container {
+  padding: 1rem !important;
+}
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.arrow--disabled {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.featured-cards-wrapper.budget
+  .keen-slider:not([data-keen-slider-disabled])
+  .keen-slider__slide {
+  // width: fit-content !important;
+}
+
+@include phone() {
+  .featured-cards-wrapper
+    .keen-slider:not([data-keen-slider-disabled])
+    .keen-slider__slide {
+    min-width: 97.5% !important;
+    max-width: 97.5% !important;
+  }
+}

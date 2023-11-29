@@ -1,0 +1,105 @@
+.service-page {
+  > .header {
+    padding: 3.5rem 0;
+    text-align: center;
+    color: $secondary-color;
+
+    @include phone() {
+      padding: 2.5rem 0;
+    }
+
+    > h2 {
+      color: $secondary-color;
+      font-size: 2.4rem;
+      line-height: 2.6rem;
+      margin: 0;
+
+      @include phone() {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+
+    a {
+      margin: 10px 5px;
+      color: $secondary-color;
+
+      &.active {
+        color: $primary-color;
+      }
+
+      @include phone() {
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+    }
+  }
+}
+
+.service-page .service-page-banner {
+  background: url("/images/services/banner-bg.png") no-repeat center
+    center/cover;
+  padding: 2rem;
+  display: none;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet-landscape() {
+    display: flex;
+
+    .hero-text {
+      width: 50%;
+      height: 100%;
+    }
+
+    .hero-img .image-container .img {
+      height: 250px !important;
+    }
+  }
+
+  @include desktop() {
+    .hero-text {
+      width: 40%;
+    }
+  }
+}
+
+.service-page .service-page-banner .hero-text {
+  .circle {
+    height: 250px;
+    width: 250px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(50%, -50%);
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 2.7rem;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+}
+
+.service-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 2rem;
+}

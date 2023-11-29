@@ -1,0 +1,109 @@
+.brand-cards-container {
+  position: relative;
+
+  @include desktop() {
+    width: 92%;
+  }
+}
+
+.brand-cards-container h3 {
+  @include phone() {
+    text-align: center;
+  }
+}
+
+.brand-cards-container .brand-card {
+  width: 100px;
+
+  @include phone() {
+    // max-width: 50px !important;
+    // min-width: 50px !important;
+    // width: 50px;
+  }
+}
+
+.brand-cards-container {
+  .carousal-arrow {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+}
+
+.brand-cards-container .brand-card .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 0;
+  }
+
+  &.active {
+    border-color: $primary-color;
+  }
+
+  @include phone() {
+    align-items: initial;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    margin-bottom: 1px;
+
+    p {
+      font-size: 0.6rem;
+      line-height: 0.7rem;
+    }
+
+    img {
+      width: 40px !important;
+      object-fit: contain !important;
+    }
+  }
+}
+
+.brand-cards-container .carousal-left {
+  top: 50%;
+  left: 0%;
+  transform: translate(0px, -50%);
+}
+
+.brand-cards-container .carousal-right {
+  top: 50%;
+  right: 0%;
+  transform: translate(0px, -50%);
+}
+
+.brand-cards-container .navigation-wrapper {
+  width: 100%;
+}
+.brand-cards-container.shrunk .navigation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 1rem;
+  background-color: #fff;
+  z-index: 105;
+
+  .image-container {
+    // width: 70px;
+    height: 40px;
+  }
+
+  .carousal-arrow {
+    display: none;
+  }
+}

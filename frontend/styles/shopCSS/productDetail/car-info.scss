@@ -1,0 +1,232 @@
+// -------- car info title start --------
+.product-detail-container {
+  .car-info {
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-transform: capitalize;
+
+        @include phone() {
+          font-size: 1.2rem;
+        }
+      }
+
+      .icon {
+        color: $primary-color;
+        font-size: 1.8rem;
+        margin-left: 3rem;
+
+        @include phone() {
+          margin-left: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+// -------- car info title end --------
+
+// -------- car info engine start --------
+.product-detail-container {
+  .car-info {
+    .engine {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+
+      @include phone() {
+        margin: 0.5rem 0 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 500;
+        border-right: 2px solid $secondary-color;
+        margin-right: 2rem;
+        padding-right: 2rem;
+
+        &:last-of-type {
+          border: none;
+        }
+
+        @include phone() {
+          margin-right: 1rem;
+          padding-right: 1rem;
+          font-size: 0.8rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+// -------- car info engine end --------
+
+// -------- car info price start --------
+.product-detail-container {
+  .car-info {
+    .price {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1rem;
+
+        .icon {
+          font-size: 1.3rem;
+          margin-right: 0.5rem;
+        }
+
+        @include phone() {
+          font-size: 0.8rem;
+        }
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+        font-weight: 700;
+
+        @include phone() {
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+// -------- car info price end --------
+
+// -------- car info fav-cta start --------
+.product-detail-container {
+  .car-info {
+    .fav-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1rem 0;
+
+      @include phone() {
+        margin: 0.8rem 0 0.8rem;
+      }
+
+      p {
+        line-height: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $primary-color;
+        margin: 0;
+        cursor: pointer;
+
+        @include phone() {
+          font-size: 0.8rem;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        text-decoration: line-through;
+        text-decoration-color: $border-color;
+        color: $border-color;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+
+        @include phone() {
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}
+// -------- car info fav-cta end --------
+
+// -------- car info location start --------
+.product-detail-container {
+  .car-info {
+    .location {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1rem;
+
+        &:first-of-type {
+          text-transform: capitalize;
+        }
+
+        @include phone() {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+// -------- car info location end --------
+
+// -------- car info cta btns start --------
+.product-detail-container {
+  .car-info {
+    .cta-btns {
+      margin: 1.5rem 0 0;
+      display: flex !important;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        color: $secondary-color;
+      }
+
+      .seller {
+        width: 100%;
+      }
+
+      .connect {
+        display: block !important;
+        margin-top: 1rem;
+        border-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.15);
+        overflow: visible;
+
+        a {
+          visibility: visible;
+          display: block !important;
+        }
+
+        &:hover {
+          background-color: $secondary-color;
+          color: #fff !important;
+        }
+
+        &:hover a {
+          color: #fff !important;
+        }
+      }
+
+      @include phone() {
+        display: none;
+      }
+    }
+  }
+}
+
+@import "./seller-detail-cta.scss";
+// -------- car info cta btns end --------

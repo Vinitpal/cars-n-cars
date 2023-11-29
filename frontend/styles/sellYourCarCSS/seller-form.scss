@@ -1,0 +1,257 @@
+.seller-form {
+  width: 80%;
+  margin: 2rem auto;
+  border: 1px solid $tertiary-color;
+  box-shadow: 0 0 0.5rem 0.5rem $tertiary-color;
+}
+
+.seller-form .seller-form-container {
+  border: 1px solid $border-color;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.seller-form .seller-form-container {
+  .ant-tabs .ant-tabs-nav {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .ant-row {
+    flex-flow: column wrap;
+  }
+
+  .ant-tabs-ink-bar {
+    background: none !important;
+  }
+
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    border: none !important;
+    background-color: transparent !important;
+    border-bottom: 4px solid currentColor !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+  }
+
+  .ant-tabs-top > .ant-tabs-nav::before,
+  .ant-tabs-bottom > .ant-tabs-nav::before,
+  .ant-tabs-top > div > .ant-tabs-nav::before,
+  .ant-tabs-bottom > div > .ant-tabs-nav::before {
+    display: none !important;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $primary-color !important;
+    text-shadow: 0 0 0.25px currentcolor !important;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-disabled {
+    color: rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+
+  .ant-tabs-content-holder {
+    padding: 0 !important;
+  }
+}
+
+.seller-form form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .input-container {
+    margin: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ant-select-selector {
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-input-number {
+      width: 100%;
+    }
+
+    .ant-radio-button-wrapper {
+      width: 45%;
+      text-align: center;
+      margin-right: 1rem;
+      font-weight: 400 !important;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    .ant-radio-button-wrapper-checked {
+      background-color: $secondary-color !important;
+      border-color: $secondary-color !important;
+      color: #fff !important;
+    }
+  }
+}
+
+// -------- lead form start  --------
+
+.seller-form.lead-seller-form {
+  width: 100%;
+
+  @include tablet-landscape() {
+    width: 50%;
+  }
+}
+
+.seller-form .seller-form-container.lead-form-container {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem 2rem 2rem;
+}
+
+.seller-form form.lead-form {
+  flex-direction: column;
+  align-items: center;
+
+  .input-container {
+    width: 100%;
+  }
+
+  .step {
+    .number {
+      margin: 2rem auto;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+}
+
+.seller-form form.lead-form {
+  flex-direction: column;
+  align-items: center;
+
+  .input-container {
+    width: 100%;
+  }
+
+  .whatsapp-us {
+    background-color: #24d366;
+    border-color: #24d366;
+    margin-top: 0;
+    display: block !important;
+
+    a {
+      color: #fff !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      .icon {
+        margin-right: 5px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+// -------- lead form end  --------
+
+.seller-form .verify-otp {
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+
+  .input-container {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    span {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@include phone() {
+  .seller-form {
+    width: 100%;
+  }
+
+  .seller-form .seller-form-container {
+    margin: 0;
+  }
+
+  .seller-form form {
+    flex-direction: column;
+  }
+
+  .seller-form .seller-form-container .ant-tabs .ant-tabs-nav {
+    width: 100%;
+  }
+
+  .seller-form .verify-otp {
+    margin: 0 0 1rem;
+  }
+}
+
+@include desktop() {
+  .seller-form form .input-container {
+    margin: 1rem 0;
+    width: 48%;
+  }
+}
+
+.ant-select-selector,
+.ant-input-number-affix-wrapper,
+.ant-input-number,
+.ant-input,
+.ant-input-affix-wrapper {
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus-within,
+  &::selection {
+    border-color: $primary-color !important;
+  }
+}
+
+.seller-form .ant-form-item-label {
+  text-align: left !important;
+}
+.seller-form .ant-form-item-label > label {
+  height: fit-content !important;
+}
+
+.seller-form .radio-group {
+  width: 100% !important;
+}
+
+.seller-form .upload-input .ant-form-item {
+  flex-direction: column !important;
+}

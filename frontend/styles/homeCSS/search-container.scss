@@ -1,0 +1,66 @@
+.search-container {
+  display: none;
+}
+
+.search-container.active {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 46px;
+  z-index: 10002;
+  background-color: #fff;
+  overflow: scroll;
+  padding: 1rem 2rem 8rem;
+
+  @include tablet-landscape() {
+    top: 92px;
+  }
+}
+
+.search-container.active .search-cards-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include tablet-landscape() {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.search-container.active .search-cards-container .featured-card {
+  width: 100%;
+  margin: 1rem 0;
+
+  .image-container {
+    width: 100%;
+  }
+
+  @include tablet-landscape() {
+    width: 22%;
+  }
+}
+
+.search-container.active .back-btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-right: 2rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $primary-color;
+  font-weight: 600;
+
+  .icon {
+    font-weight: 600;
+    margin-right: 0.3rem;
+  }
+}

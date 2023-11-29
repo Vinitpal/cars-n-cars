@@ -1,0 +1,344 @@
+.filter-container {
+  position: sticky;
+  top: 92px;
+
+  .filter-items-container {
+    height: 80vh;
+    overflow-y: scroll;
+
+    :-webkit-scrollbar-thumb {
+      background-color: red;
+      border: 4px solid transparent;
+      border-radius: 8px;
+      background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
+  }
+}
+
+.filter-container,
+.filter-container-mobile {
+  flex: 0.25;
+  display: none;
+
+  @include tablet-landscape() {
+    display: block;
+  }
+
+  @include desktop() {
+    flex: 0.3;
+  }
+
+  > h2 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}
+
+.filter-items-container {
+  background-color: $tertiary-color;
+  padding: 1rem;
+  border-radius: 5px;
+
+  .ant-collapse-borderless {
+    background-color: #fff;
+  }
+}
+
+// -------- location container start --------
+.filter-items-container {
+  .location-container {
+    background-color: #fff;
+    padding: 1rem;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .location-search-bar {
+      position: relative;
+
+      .ant-select {
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+        border-radius: 3px;
+      }
+
+      .ant-select-selector {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset !important;
+      }
+
+      input {
+        width: 100%;
+        outline: none;
+      }
+    }
+
+    .gps {
+      display: flex;
+      align-items: center;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      padding: 0.5rem 0.5rem;
+      color: $primary-color;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      .icon {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        p {
+          margin: 0;
+          font-size: 0.7rem;
+          font-weight: 500;
+        }
+
+        small {
+          margin: 0;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+// -------- location container end --------
+
+// -------- budget container start --------
+.filter-items-container {
+  .budget-container {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    .budget-slider {
+      text-align: center;
+
+      h4 {
+        margin: 0;
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+
+    .budget-tags {
+      button {
+        border: none;
+        outline: none;
+        background-color: $tertiary-color;
+        margin: 0.4rem 0.5rem;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.62rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        &.active {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ant-collapse-header {
+    padding: 0 !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .ant-slider {
+    margin-top: 6px;
+  }
+
+  .ant-collapse-content-box {
+    padding-top: 1rem !important;
+  }
+
+  .ant-slider-track {
+    background-color: $border-color !important;
+  }
+
+  .ant-slider-handle {
+    border-color: $secondary-color !important;
+  }
+}
+// -------- budget container end --------
+
+// -------- distance container start --------
+.filter-items-container {
+  .distance-container {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .distance-slider {
+      text-align: center;
+
+      h4 {
+        margin: 0;
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+
+    .distance-tags {
+      button {
+        border: none;
+        outline: none;
+        background-color: $tertiary-color;
+        margin: 0.4rem 0.5rem;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.62rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        &.active {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// -------- distance container end --------
+
+// -------- fuel container start --------
+.filter-items-container {
+  .fuel-container {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+}
+// -------- fuel container end --------
+
+// -------- body-type container start --------
+.filter-items-container {
+  .body-type-container {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .ant-collapse-content-box {
+      padding: 0 !important;
+      padding-top: 1rem !important;
+    }
+
+    .car-body-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .car-body {
+        border: 1px solid $border-color;
+        // padding: 0.8rem 0.3rem 0.8rem;
+        padding: 0.3rem;
+        margin: 0.2rem 0.1rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 83px;
+
+        &:hover {
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        &.active {
+          border-color: $primary-color;
+        }
+
+        small {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+// -------- body-type container end --------
+
+.filter-container-mobile {
+  display: block;
+
+  .ant-modal-body {
+    padding: 0px 0.5rem;
+  }
+
+  .filter-items-container {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.filter-btn-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  gap: 1px;
+  display: flex;
+  z-index: 100;
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button {
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.filter-container-mobile {
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 4rem;
+}

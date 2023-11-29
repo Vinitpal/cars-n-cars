@@ -1,0 +1,44 @@
+.tnc-page {
+  width: 90%;
+  margin: 2rem auto;
+
+  @include tablet-landscape() {
+    width: 60%;
+  }
+
+  .header {
+    margin: 0 0 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  h2 {
+    color: #455066;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 1.5rem 0;
+  }
+
+  p {
+    color: #455066;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  ul {
+    margin-left: 1rem;
+
+    li {
+      color: #455066;
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  a {
+    color: #ec6a00;
+  }
+}

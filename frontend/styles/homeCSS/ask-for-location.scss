@@ -1,0 +1,234 @@
+.ask-for-location {
+  padding: 2rem 4rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-100%);
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.ask-for-location .header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ask-for-location .header .close-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.ask-for-location .header .text {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: $secondary-color;
+  }
+  p {
+    color: $text-color;
+  }
+}
+
+.ask-for-location .location-searchBar {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.ask-for-location .location-searchBar button {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-right: 2rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $primary-color;
+  font-weight: 600;
+
+  .icon {
+    font-weight: 600;
+    margin-right: 0.3rem;
+  }
+}
+
+.ask-for-location .location-searchBar input {
+  width: 70%;
+}
+
+.ask-for-location .popular-cities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ask-for-location .popular-cities .popular-city-card {
+  border: 1px solid $border-color;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+.ask-for-location .other-cities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ask-for-location .other-cities .other-city-card {
+  border: 1px solid $border-color;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    border-color: $primary-color;
+  }
+}
+
+// --------------MOBILE PART----------------
+
+.bg-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  z-index: 1001;
+  position: fixed;
+  top: -70px;
+}
+
+.bg-wrapper.active {
+  display: none;
+}
+
+.ask-for-location-mobile {
+  width: 100%;
+  position: fixed;
+  z-index: 1002;
+  background-color: #fff;
+  bottom: 0;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(100%);
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.ask-for-location-mobile .header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .text {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      margin: 0;
+    }
+  }
+  .close-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.ask-for-location-mobile .location-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.2rem 0 0;
+  gap: 1rem;
+}
+
+.ask-for-location-mobile .location-cta button {
+  width: 85%;
+  padding: 0.8rem 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  &.current {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+  &.manual {
+    text-transform: uppercase;
+  }
+}
+
+@include phone() {
+  .ask-for-location {
+    position: fixed;
+    z-index: 1002;
+    height: 100%;
+    overflow: scroll;
+    padding: 2rem 1rem;
+  }
+
+  .ask-for-location .header .text {
+    h2 {
+      line-height: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .ask-for-location .location-searchBar {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .ask-for-location .popular-cities {
+    gap: 0.5rem;
+  }
+
+  .ask-for-location .other-cities .other-city-card {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

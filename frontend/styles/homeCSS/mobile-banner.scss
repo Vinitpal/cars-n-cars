@@ -1,0 +1,152 @@
+.home-mobile-banner {
+  .container {
+    background-color: #fff;
+    color: $secondary-color;
+
+    > div {
+      width: 85%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      color: $secondary-color;
+      margin: 0 0 0.3rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    button {
+      width: 100%;
+      outline: none;
+      margin: 0.8rem 0;
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: 2px solid $secondary-color;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+
+    .buy-used-car {
+      color: $secondary-color;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $tertiary-color;
+      }
+    }
+
+    .sell-your-car {
+      color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $tertiary-color;
+      }
+    }
+  }
+
+  @include tablet-landscape() {
+    display: none;
+  }
+}
+
+.search-bar-mobile {
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  margin: 1rem auto;
+
+  &.shrunk {
+    margin: 0;
+  }
+
+  &.shrunk input {
+    border-radius: 0 !important;
+  }
+
+  input {
+    width: 85%;
+    border: none;
+    outline: none;
+    background-color: $tertiary-color;
+    padding: 0.6rem 3rem;
+    border-radius: 11px;
+    color: $secondary-color;
+    font-size: 1.1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &::placeholder,
+    &:-ms-input-placeholder {
+      color: $secondary-color;
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 49%;
+    left: 3.8rem;
+    font-size: 1.3rem;
+    transform: translate(-50%, -50%);
+    color: $secondary-color;
+  }
+
+  @include tablet-landscape() {
+    display: none;
+  }
+}
+
+.shrunk {
+  box-sizing: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  input {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+    left: 1.8rem;
+  }
+}
+
+.search-bar-mobile.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+  input {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+    left: 1.8rem;
+  }
+}

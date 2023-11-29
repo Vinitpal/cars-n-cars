@@ -1,0 +1,151 @@
+.product-card {
+  margin-left: 2px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0px 1px 3px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+
+  @include phone() {
+    width: 100%;
+  }
+
+  @include tablet() {
+    width: 48%;
+  }
+
+  @include tablet-landscape() {
+    width: 45%;
+  }
+
+  @include desktop() {
+    width: 30%;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 210px;
+
+    .overlay-icon {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    > span {
+      position: unset !important;
+    }
+
+    img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      object-fit: cover;
+    }
+
+    .icon {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+  }
+
+  .text {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    .car-engine-wrapper {
+      margin: 0.2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      color: $text-color;
+
+      .vertical-hr {
+        height: 10px;
+        width: 1px;
+        margin: 0 0.5rem;
+        background-color: $text-color;
+      }
+    }
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    .distance {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $secondary-color;
+
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+        color: $text-color;
+      }
+    }
+
+    .vertical-hr {
+      height: 1.2rem;
+      width: 1px;
+      margin: 0 0.5rem;
+      background-color: $border-color;
+
+      @include phone() {
+        margin: 0 0.2rem;
+      }
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $primary-color;
+      margin-right: 1rem;
+
+      @include phone() {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .specs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid $border-color;
+    padding: 1rem;
+
+    small {
+      font-size: 0.75rem;
+      color: $text-color;
+      margin: 0.2rem 0;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        font-size: 1rem !important;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

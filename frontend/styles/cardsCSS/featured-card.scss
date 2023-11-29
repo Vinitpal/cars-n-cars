@@ -1,0 +1,156 @@
+.featured-card {
+  margin: 0 5px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0px 1px 3px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+
+  img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .img .image-container {
+    // width: 250px;
+    height: 240px;
+    position: relative;
+
+    .overlay-icon {
+      position: absolute;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    > span {
+      height: 100% !important;
+    }
+
+    @include tablet-landscape() {
+      // width: 320px;
+    }
+  }
+
+  .text {
+    padding: 1rem;
+    padding-top: 0.5rem;
+
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .car-engine-wrapper {
+      margin: 0.2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      color: $text-color;
+
+      .vertical-hr {
+        height: 10px;
+        width: 1px;
+        margin: 0 0.5rem;
+        background-color: $text-color;
+      }
+    }
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    .distance {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $secondary-color;
+
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+        color: $text-color;
+      }
+    }
+
+    .vertical-hr {
+      height: 1.2rem;
+      width: 1px;
+      margin: 0 0.5rem;
+      background-color: $border-color;
+
+      @include phone() {
+        margin: 0 0.2rem;
+      }
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $primary-color;
+      margin-right: 1rem;
+
+      @include phone() {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .specs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+    padding: 1rem;
+
+    small {
+      font-size: 0.7rem;
+      color: $text-color;
+
+      .icon {
+        margin-right: 0.3rem;
+      }
+
+      @include tablet-landscape() {
+        font-size: 0.9rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-right: 1rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: $secondary-color;
+
+      @include phone {
+        margin-right: 0.5rem;
+      }
+
+      @include tablet-landscape() {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.similar-car .featured-card {
+  margin: 0 5px 1rem;
+}

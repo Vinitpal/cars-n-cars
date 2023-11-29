@@ -1,0 +1,55 @@
+.product-detail-second-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  flex-direction: column;
+
+  @include phone() {
+    padding: 0.5rem 2rem;
+  }
+
+  @include tablet-landscape() {
+    flex-direction: row;
+  }
+}
+
+.product-detail-second-section {
+  .car-details {
+    flex: 0.7;
+    align-self: stretch;
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+    }
+
+    h3 {
+      margin: 0;
+      word-break: break-all;
+
+      @include phone() {
+        font-size: 0.9rem;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+  }
+}
+
+.product-detail-second-section {
+  .car-preview {
+    flex: 0.3;
+
+    .product-card {
+      width: 100% !important;
+      margin-bottom: 0;
+    }
+
+    @include phone() {
+      display: none !important;
+    }
+  }
+}

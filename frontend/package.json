@@ -1,0 +1,38 @@
+{
+  "name": "carsNcars-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "npm run build && next export -o _static",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@next/bundle-analyzer": "^12.2.4",
+    "@reduxjs/toolkit": "^1.8.2",
+    "antd": "^4.20.4",
+    "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
+    "form-data": "^4.0.0",
+    "keen-slider": "^6.6.14",
+    "next": "^12.1.7-canary.29",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-geocode": "^0.2.3",
+    "react-icons": "^4.3.1",
+    "react-redux": "^8.0.2",
+    "redux-logger": "^3.0.6",
+    "sass": "^1.5.1",
+    "sharp": "^0.30.6"
+  },
+  "devDependencies": {
+    "eslint": "8.15.0",
+    "eslint-config-next": "^0.2.4"
+  }
+}

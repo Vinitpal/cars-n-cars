@@ -1,0 +1,84 @@
+.detail-form {
+  margin: 2rem;
+
+  .input-container.upload-input {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .ant-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    border-color: $primary-color !important;
+    color: $primary-color !important;
+    background-color: $tertiary-color !important;
+    width: 180px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem;
+
+    .icon {
+      margin-right: 0.5rem !important;
+    }
+  }
+
+  button {
+    text-align: center;
+    outline: none;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding: 0.5rem 0;
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border-color: $primary-color;
+    font-weight: 600;
+    width: 50%;
+    margin: 2rem auto 0;
+
+    @include phone() {
+      width: 90%;
+    }
+  }
+}
+
+@include phone() {
+  .detail-form {
+    margin: 0;
+  }
+
+  .detail-form .input-container.upload-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.detail-form .ant-upload-list-picture .ant-upload-list-item {
+  height: fit-content !important;
+}
+
+.detail-form .ant-upload-list-picture .ant-upload-span {
+  flex-direction: column !important;
+}
+
+.detail-form .ant-upload-list-picture .ant-upload-list-item-thumbnail {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
+.detail-form .ant-upload-list-picture .ant-upload-list-item-thumbnail img {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.detail-form .car-pic-upload .ant-btn {
+  align-items: center !important;
+  justify-content: center !important;
+}

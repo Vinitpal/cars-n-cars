@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./mixins";
+
+html {
+  scroll-behavior: smooth;
+}
+
+// responsive fix for next js image
+.image-container {
+  // width: 100%;
+  // height: 40px;
+  // specify width/height on inline style
+
+  > span {
+    position: relative !important;
+  }
+
+  .img {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: 100% !important;
+  }
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.disabled-cursor {
+  cursor: not-allowed !important;
+}

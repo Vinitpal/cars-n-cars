@@ -1,0 +1,99 @@
+// -------- ant carousel start --------
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  font-size: inherit !important;
+  color: currentColor !important;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  left: 10px !important;
+  z-index: 100 !important;
+  color: $secondary-color !important;
+  background-color: $tertiary-color !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50%;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  right: 10px !important;
+  z-index: 100 !important;
+  color: $secondary-color !important;
+  background-color: $tertiary-color !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50%;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+// -------- ant carousel end --------
+
+// -------- ant tabs start  --------
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: $tertiary-color !important;
+  background-color: $secondary-color !important;
+  border: 1px solid black !important;
+  text-shadow: 0 0 0.25px currentcolor !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.ant-tabs-tab-btn {
+  background-color: $border-color !important;
+  border: 1px solid $border-color !important;
+  text-shadow: 0 0 0.25px currentcolor !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+}
+
+.ant-tabs-tab:hover {
+  color: $secondary-color !important;
+}
+
+.ant-tabs-tab:hover .ant-tabs-tab-btn {
+  border: 1px solid $secondary-color !important;
+}
+
+.ant-tabs-tab-btn {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.ant-tabs-tab {
+  width: 100% !important;
+  text-align: center !important;
+  @include phone() {
+    margin: 0 !important;
+  }
+}
+
+.ant-tabs-nav-list {
+  width: 100% !important;
+}
+
+.ant-tabs-content-holder {
+  padding: 0 0.2rem;
+}
+// -------- ant tabs end  --------
+
+@include phone() {
+  .ant-tabs-nav {
+    margin-bottom: 0 !important;
+  }
+
+  .ant-row {
+    row-gap: 0 !important;
+  }
+
+  .ant-tabs-tab-btn {
+    padding: 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+}

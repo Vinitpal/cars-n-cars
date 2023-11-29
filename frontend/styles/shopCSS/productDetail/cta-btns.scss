@@ -1,0 +1,88 @@
+.product-detail {
+  button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 2px solid $secondary-color;
+    color: $secondary-color;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding: 0.5rem 0;
+
+    @include phone() {
+      font-size: 1rem;
+    }
+
+    &:active {
+      transform: translateY(0.8px);
+    }
+  }
+
+  .seller {
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border-color: $primary-color;
+    font-weight: 600;
+  }
+
+  .connect {
+    width: 100%;
+    border-color: #cfcfcf;
+    background-color: #cfcfcf;
+    overflow: visible;
+
+    a {
+      visibility: visible;
+      color: $secondary-color;
+      display: block !important;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: #fff !important;
+    }
+
+    &:hover a {
+      color: #fff !important;
+    }
+  }
+}
+
+.product-detail .cta-btns-section {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+
+  button {
+    width: 100%;
+    outline: none;
+    margin: 0;
+
+    &.connect {
+      margin-right: 1px;
+    }
+  }
+
+  @include tablet-landscape() {
+    position: static;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    button {
+      width: 25%;
+      font-size: 1rem !important;
+      font-weight: 500;
+    }
+
+    .connect .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}

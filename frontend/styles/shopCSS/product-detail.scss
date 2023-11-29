@@ -1,0 +1,165 @@
+.product-detail {
+  display: block !important;
+
+  > .header {
+    background-color: #000000;
+    background-image: linear-gradient(180deg, #000000 30%, #212121 74%);
+    padding: 3.5rem 0;
+    text-align: center;
+    color: $tertiary-color;
+
+    @include phone() {
+      padding: 2.5rem 0;
+    }
+
+    > h2 {
+      color: $tertiary-color;
+      font-size: 2.4rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: capitalize;
+
+      @include phone() {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+
+      .icon {
+        margin-left: 1rem;
+        color: $primary-color;
+
+        @include phone() {
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    .breadcrumb {
+      @include phone() {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    a {
+      margin: 0 5px;
+      color: $tertiary-color;
+
+      @include phone() {
+        font-size: 0.8rem;
+      }
+
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.product-detail {
+  .product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+
+    @include phone() {
+      gap: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+
+    @include tablet-landscape() {
+      padding: 1rem 2rem;
+      flex-direction: row;
+    }
+  }
+}
+
+.product-detail {
+  .product-detail-container {
+    .car-carousel {
+      padding: 0 1rem;
+      width: 100%;
+
+      .image-container img {
+        width: 95% !important;
+        height: 100% !important;
+
+        @include big-desktop() {
+          height: 400px !important;
+          object-fit: contain;
+        }
+      }
+
+      .keen-slider.thumbnail .image-container img {
+        height: 100% !important;
+      }
+
+      .thumbnail .keen-slider__slide {
+        font-size: 30px;
+        margin-top: 10px;
+      }
+      .thumbnail .keen-slider__slide {
+        cursor: pointer;
+      }
+      .thumbnail .keen-slider__slide.active {
+        border: 2px solid black;
+      }
+
+      @include tablet-landscape() {
+        width: 56%;
+      }
+
+      @include big-desktop() {
+        width: 45%;
+        padding: 1.2rem 3rem;
+
+        .image-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.product-detail {
+  .product-detail-container {
+    .car-info {
+      padding: 1.65rem 1rem;
+      width: 100%;
+      align-self: flex-start;
+
+      @include phone() {
+        padding: 1rem;
+      }
+
+      @include tablet-landscape() {
+        width: 44%;
+      }
+
+      @include desktop() {
+        padding: 1.65rem 3rem;
+      }
+    }
+  }
+}
+
+// -------- car info start --------
+@import "./productDetail/car-info.scss";
+// -------- car info end --------
+
+// -------- cta btns start --------
+@import "./productDetail/cta-btns.scss";
+// -------- cta btns end --------
+
+// -------- product detail second section start --------
+@import "./productDetail/second-section.scss";
+// -------- product detail second section end --------
+
+// -------- ant design changes start  --------
+@import "./productDetail/antd-changes.scss";
+// -------- ant design changes end  --------

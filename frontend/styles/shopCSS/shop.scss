@@ -1,0 +1,75 @@
+@import "./filter-container.scss";
+@import "./shop-container.scss";
+@import "./product-detail.scss";
+@import "./brand-cards-container.scss";
+
+.shop {
+  > .header {
+    background-color: #000000;
+    background-image: linear-gradient(180deg, #000000 30%, #212121 74%);
+    padding: 3.5rem 0;
+    text-align: center;
+    color: $tertiary-color;
+
+    @include phone() {
+      padding: 2.5rem 0;
+    }
+
+    > h2 {
+      color: $tertiary-color;
+      font-size: 2.4rem;
+      line-height: 2.6rem;
+      margin: 0;
+
+      @include phone() {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+
+    a {
+      margin: 0 5px;
+      color: $tertiary-color;
+
+      &.active {
+        color: $primary-color;
+      }
+
+      @include phone() {
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  > .container {
+    display: flex;
+    align-items: flex-start;
+    margin: 3rem 0 2rem;
+    padding: 0 2rem;
+    gap: 2rem;
+    position: relative;
+  }
+}
+
+.filter-icon {
+  position: fixed;
+  z-index: 1000;
+  bottom: 5%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: $secondary-color;
+}
+
+.load-more-container {
+  width: 100%;
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet-landscape() {
+    width: 30%;
+  }
+}

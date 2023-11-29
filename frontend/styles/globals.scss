@@ -1,0 +1,11 @@
+@import "./commonCSS/common.scss", "./footerCSS/footer.scss",
+  "./homeCSS/home.scss", "./navbarCSS/navbar.scss", "./cardsCSS/cards.scss",
+  "./shopCSS/shop.scss", "./sellYourCarCSS/sell-your-car.scss",
+  "./authCSS/auth.scss", "./serviceCSS/service.scss", "./blogCSS/blog-page.scss", "./tncCSS/tnc.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}

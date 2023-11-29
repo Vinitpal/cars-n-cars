@@ -1,0 +1,24 @@
+.submitted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.submitted-container {
+  margin: 2rem auto;
+  border: 1px solid $tertiary-color;
+  box-shadow: 0 0 0.5rem 0.5rem $tertiary-color;
+}
+
+.submitted-container .wrapper {
+  text-align: center;
+  border: 1px solid $border-color;
+  padding: 3rem;
+  margin: 2rem;
+}
+
+.submitted-container .wrapper .icon {
+  font-size: 2rem;
+  color: $primary-color;
+}
