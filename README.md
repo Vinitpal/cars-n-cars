@@ -20,6 +20,7 @@ https://cars-n-cars.vercel.app/
 ## Tech Stack
 
 **Frontend:** Nextjs, Redux-toolkit, sass
+
 **Backend:** Nodejs, Express.js, Mongoose
 
 ## Run Locally
