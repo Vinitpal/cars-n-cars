@@ -35,7 +35,7 @@ const ModalContent = ({ selectedPlan }) => {
   const [loading, setLoading] = useState(false);
 
   const onFinish = async (values) => {
-    console.log(values, timeValue._d, selectedPlan);
+    // console.log(values, timeValue._d, selectedPlan);
     // console.log({
     //   name: values.name,
     //   mobile: values.phone,

@@ -10,7 +10,7 @@ const ModalContent = ({ v_id, brand, model, city }) => {
   const router = useRouter();
 
   const onFinish = async (values) => {
-    console.log(values);
+    // console.log(values);
     var bodyFormData = new FormData();
 
     bodyFormData.append("email", values.email);
@@ -29,7 +29,7 @@ const ModalContent = ({ v_id, brand, model, city }) => {
         headers: { "Content-Type": "multipart/form-data" },
       })
         .then(async function (response) {
-          console.log(response);
+          // console.log(response);
 
           const category = router.pathname.split("/")[1];
 

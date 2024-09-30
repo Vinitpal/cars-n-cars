@@ -45,7 +45,7 @@ const BasicDetailForm = ({ setBasicDetailCompleted }) => {
   }, [Models, brandValue, modelLoading]);
 
   const onFinish = async (values) => {
-    console.log(values);
+    // console.log(values);
     dispatch(setBasicDetailValue(values));
 
     setLoading(true);

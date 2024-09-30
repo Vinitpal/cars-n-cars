@@ -12,7 +12,7 @@ const Menu = () => {
   const dispatch = useDispatch();
   const [active, setActive] = useState(false);
 
-  console.log(bodyType);
+  // console.log(bodyType);
 
   return (
     <div className="car-body-container">

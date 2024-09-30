@@ -8,11 +8,11 @@ const CarCarousel = ({ productData }) => {
   const [imgArr, setImgArr] = useState([]);
 
   useEffect(() => {
-    console.log(productData.images);
+    // console.log(productData.images);
     const carImgArr = [...productData.images];
     setImgArr(carImgArr.reverse());
 
-    console.log(imgArr);
+    // console.log(imgArr);
   }, [productData]);
 
   const getImgSrc = (id) => {

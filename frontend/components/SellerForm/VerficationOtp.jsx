@@ -18,11 +18,11 @@ const VerficationOtp = () => {
   const router = useRouter();
 
   const onFinish = async (values) => {
-    console.log(values);
+    // console.log(values);
     var bodyFormData = new FormData();
 
     const mobile = sessionStorage.getItem("sell_ur_car_mobile");
-    console.log(mobile);
+    // console.log(mobile);
 
     bodyFormData.append("mobile", +mobile);
     bodyFormData.append("otp", values.otp);

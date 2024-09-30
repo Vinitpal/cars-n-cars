@@ -31,7 +31,7 @@ const SellerDetailForm = ({ setSellerDetailCompleted }) => {
   const router = useRouter();
 
   const onFinish = async (values) => {
-    console.log(values);
+    // console.log(values);
     var bodyFormData = new FormData();
 
     bodyFormData.append("brand", +basicDetailValue.brand);
@@ -65,7 +65,7 @@ const SellerDetailForm = ({ setSellerDetailCompleted }) => {
         headers: { "Content-Type": "multipart/form-data" },
       }).then(async function (response) {
         if (response.status === 200) {
-          console.log(response);
+          // console.log(response);
           dispatch(setUserPhone(values.mobile_number));
           dispatch(setUserName(values.full_name));
           storeToLocal("name", values.full_name);

@@ -8,12 +8,17 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { store } from "../store/store";
 import { Provider } from "react-redux";
+import "nprogress/nprogress.css";
+import nProgress from "nprogress";
 
 function MyApp({ Component, pageProps }) {
   // to take the scroll to top
   const { pathname } = useRouter();
   useEffect(() => {
+    nProgress.start();
+    nProgress.done();
     window.scrollTo(0, 0);
+  
   }, [pathname]);
 
   return (

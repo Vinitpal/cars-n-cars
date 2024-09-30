@@ -15,8 +15,8 @@ const LocationFilter = () => {
   const location = useSelector((state) => state.location.value);
   const { data: City, isLoading: cityLoading } = useCityQuery();
   const dispatch = useDispatch();
-  console.log(userCity);
-  console.log(City);
+  // console.log(userCity);
+  // console.log(City);
 
   // by default raipur
 

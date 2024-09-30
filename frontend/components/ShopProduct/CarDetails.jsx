@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs, Row, Col } from "antd";
 
 const CarDetails = ({ productData, bike }) => {
-  console.log(productData.insurance);
+  // console.log(productData.insurance);
 
   const overViewArray = [
     {

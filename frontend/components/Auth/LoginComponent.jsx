@@ -25,7 +25,7 @@ const LoginComponent = () => {
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
       }).then(function (response) {
-        console.log(response);
+        // console.log(response);
         sessionStorage.setItem("mobile", +values.mobile);
         router.push("/auth/OtpVerify");
       });

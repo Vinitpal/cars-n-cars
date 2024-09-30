@@ -27,7 +27,7 @@ const ModalContent = ({ v_id, brand, model, city }) => {
         headers: { "Content-Type": "multipart/form-data" },
       })
         .then(async function (response) {
-          console.log(response);
+          // console.log(response);
 
           const category = router.pathname.split("/")[1];
           const emailjs = (await import("@emailjs/browser")).default;

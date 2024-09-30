@@ -50,7 +50,7 @@ const LeadForm = () => {
   }, []);
 
   const onFinish = async (values) => {
-    console.log(values);
+    // console.log(values);
 
     var bodyFormData = new FormData();
 
@@ -70,7 +70,7 @@ const LeadForm = () => {
         headers: { "Content-Type": "multipart/form-data" },
       }).then(function (response) {
         if (response.status === 200) {
-          console.log(response);
+          // console.log(response);
           dispatch(setUserPhone(values.mobile_number));
           storeToLocal("phone", values.mobile_number);
           sessionStorage.setItem("sell_ur_car_mobile", +values.mobile_number);

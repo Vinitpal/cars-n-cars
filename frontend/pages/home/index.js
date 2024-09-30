@@ -104,7 +104,7 @@ const Home = () => {
         } search-bar-mobile`}
         onClick={() => {
           dispatch(setStartSearch(true));
-          console.log("search bar clicked");
+          // console.log("search bar clicked");
         }}
       >
         {!carLoading && Car && <FiSearch className="icon" />}
