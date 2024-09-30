@@ -6,6 +6,7 @@ import "express-async-errors";
 import express, { json } from "express";
 import session from "express-session";
 import { createServer } from "http";
+import cron from "node-cron";
 
 const app = express();
 const server = createServer(app);
@@ -75,6 +76,16 @@ app.use("/api/v1/auth", authRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
+
+function logMessage() {
+  console.log("Cron job executed at:", new Date().toLocaleString());
+}
+
+// Schedule the cron job to run every 5 minutes
+cron.schedule("*/5 * * * *", () => {
+  logMessage();
+});
+
 
 const port = process.env.PORT || 5000;
 const start = async () => {
