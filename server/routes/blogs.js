@@ -11,8 +11,8 @@ import {
 
 router.get("/get/:id", getBlog);
 router.get("/list", getBlogList);
-router.post("/add", addBlog);
-router.patch("/edit/:id", editBlog);
-router.delete("/delete/:id", deleteBlog);
+// router.post("/add", addBlog);
+// router.patch("/edit/:id", editBlog);
+// router.delete("/delete/:id", deleteBlog);
 
 export default router;

@@ -11,8 +11,8 @@ import {
 
 router.get("/get/:id", getBike);
 router.get("/list", getBikeList);
-router.post("/add", addBike);
-router.patch("/edit/:id", editBike);
-router.delete("/delete/:id", deleteBike);
+// router.post("/add", addBike);
+// router.patch("/edit/:id", editBike);
+// router.delete("/delete/:id", deleteBike);
 
 export default router;
