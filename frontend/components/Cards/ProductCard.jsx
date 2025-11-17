@@ -48,9 +48,10 @@ const ProductCard = ({ car, sliderClassName, url }) => {
             loader={() => imgSrc}
             src={imgSrc || "/images/logo.png"}
             alt="Cars&Cars"
-            width={400}
+            width={332}
             height={210}
             loading="lazy"
+            style={{ width: "100%" }}
             blurDataURL="/images/bannerCar.webp"
             placeholder="blur"
           />

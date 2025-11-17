@@ -11,6 +11,7 @@ const BlogCard = ({ url, blog }) => {
           alt="buy used car at affordable price"
           width={400}
           height={250}
+          style={{ width: "100%", objectFit: "cover" }}
         />
       </div>
       <div className="content">

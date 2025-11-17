@@ -137,6 +137,7 @@ const ServiceCard = ({ className, item }) => {
             alt="Cars&Cars"
             width={400}
             height={300}
+            style={{ width: "100%", objectFit: "cover" }}
             loading="lazy"
             blurDataURL="/images/bannerCar.webp"
             placeholder="blur"
