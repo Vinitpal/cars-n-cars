@@ -16,10 +16,7 @@ const Submitted = () => {
             </a>
           </p>
           <p>
-            Go back to{" "}
-            <Link href="/">
-              <a>Home page</a>
-            </Link>
+            Go back to <Link href="/">Home page</Link>
           </p>
         </div>
       </div>

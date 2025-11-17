@@ -1,5 +1,5 @@
-@import "./featured-card.scss";
-@import "./product-card.scss";
-@import "./blog-card.scss";
-@import "./service-card.scss";
-@import "./one-time-service-card.scss";
+@use "./featured-card.scss" as *;
+@use "./product-card.scss" as *;
+@use "./blog-card.scss" as *;
+@use "./service-card.scss" as *;
+@use "./one-time-service-card.scss" as *;

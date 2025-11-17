@@ -140,7 +140,8 @@ const AlterServiceCard = ({ className, item }) => {
           <Image
             src={item && item.image}
             alt="Cars&Cars"
-            layout="fill"
+            width={400}
+            height={300}
             loading="lazy"
             blurDataURL="/images/bannerCar.webp"
             placeholder="blur"

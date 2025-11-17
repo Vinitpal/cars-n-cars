@@ -39,8 +39,8 @@ const LoginComponent = () => {
       <div className="header">
         <h2>Login Here</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
           </Link>
           <span>{">"}</span>
           <Link href="/auth/Login">Login</Link>

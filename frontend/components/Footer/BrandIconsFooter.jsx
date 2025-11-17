@@ -33,7 +33,8 @@ const BrandIconsFooter = ({ Brands }) => {
                 className="img"
                 src={brand.image}
                 alt="Cars&Cars"
-                layout="fill"
+                width={70}
+                height={70}
               />
             </div>
           </div>

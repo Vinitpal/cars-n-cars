@@ -1,5 +1,6 @@
-@import "./login.scss";
-@import "./sign-up.scss";
+@use "../commonCSS/common.scss" as *;
+@use "./login.scss" as *;
+@use "./sign-up.scss" as *;
 
 .auth-bottom-text {
   margin: 1rem 0 0;

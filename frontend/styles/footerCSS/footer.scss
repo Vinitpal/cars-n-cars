@@ -1,4 +1,5 @@
-@import "./brand-icons-footer.scss";
+@use "../commonCSS/common.scss" as *;
+@use "./brand-icons-footer.scss" as *;
 
 footer {
   background-color: $secondary-color;

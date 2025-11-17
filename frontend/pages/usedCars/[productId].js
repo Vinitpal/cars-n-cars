@@ -84,25 +84,24 @@ const Product = ({ productData }) => {
               {/* BreadCrumb */}
               {/* ---------- */}
               <div className="breadcrumb">
-                <Link href="/">
-                  <a className="active">Home</a>
+                <Link href="/" className="active">
+                  Home
                 </Link>
 
                 <span>{">"}</span>
 
-                <Link href="/usedCars">
-                  <a className="active">Used Cars</a>
+                <Link href="/usedCars" className="active">
+                  Used Cars
                 </Link>
 
                 <span>{">"}</span>
 
-                <Link href="/usedCars">
-                  <a
-                    className="active"
-                    onClick={() => dispatch(setLocation(productData.location))}
-                  >
-                    {"Cars in " + productData.location}
-                  </a>
+                <Link
+                  href="/usedCars"
+                  className="active"
+                  onClick={() => dispatch(setLocation(productData.location))}
+                >
+                  {"Cars in " + productData.location}
                 </Link>
 
                 <span>{">"}</span>
@@ -112,7 +111,7 @@ const Product = ({ productData }) => {
                     productData.brand + "_" + productData.model
                   }?id=${productData._id}`}
                 >
-                  <a>{productData.brand + " " + productData.model}</a>
+                  {productData.brand + " " + productData.model}
                 </Link>
               </div>
             </div>

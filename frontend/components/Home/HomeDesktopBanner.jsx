@@ -23,12 +23,7 @@ const HomeDesktopBanner = () => {
       </div>
       <div className="mid">
         <div className="image-container" style={{ width: "600px" }}>
-          <Image
-            className="img"
-            src="/images/bannerCar.webp"
-            alt="Cars&Cars"
-            layout="fill"
-          />
+          <Image className="img" src="/images/bannerCar.webp" alt="Cars&Cars" width={600} height={400} />
         </div>
       </div>
       <div className="right">

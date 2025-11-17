@@ -9,10 +9,7 @@ const Submitted = () => {
           <FiCheckCircle className="icon" />
           <h2>Form Submitted Successfully</h2>
           <p>
-            Go back to{" "}
-            <Link href="/">
-              <a>Home page</a>
-            </Link>
+            Go back to <Link href="/">Home page</Link>
           </p>
         </div>
       </div>

@@ -42,12 +42,7 @@ const BrandsCarousel = ({ Brands, isBike }) => {
           }
         }}
       >
-        <Image
-          className="img"
-          src={brand.image}
-          alt="Cars&Cars"
-          layout="fill"
-        />
+        <Image className="img" src={brand.image} alt="Cars&Cars" width={100} height={100} />
         <p>{brand.title}</p>
       </div>
     </div>

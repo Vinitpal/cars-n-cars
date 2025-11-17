@@ -37,65 +37,62 @@ const FeaturedCard = ({ car, sliderClassName, isBike }) => {
             ? `/usedBikes/${car.brand + "_" + car.model}?id=${car._id}`
             : `/usedCars/${car.brand + "_" + car.model}?id=${car._id}`
         }
-        passHref
+        className={`featured-card ${sliderClassName} ${
+          car.is_active === "0" && "disabled-link"
+        }`}
       >
-        <a
-          className={`featured-card ${sliderClassName} ${
-            car.is_active === "0" && "disabled-link"
-          }`}
-        >
-          <div className="img">
-            <div className="image-container">
-              <Image
-                className="img"
-                src={car.images[0] || "carsNcars.png"}
-                alt="Cars&Cars"
-                layout="fill"
-                loading="lazy"
-                blurDataURL="/images/bannerCar.webp"
-                placeholder="blur"
-              />
+        <div className="img">
+          <div className="image-container">
+            <Image
+              className="img"
+              src={car.images[0] || "/images/logo.png"}
+              alt="Cars&Cars"
+              width={400}
+              height={240}
+              loading="lazy"
+              blurDataURL="/images/bannerCar.webp"
+              placeholder="blur"
+            />
 
-              {car && car.is_active === "0" && (
-                <div className="overlay-icon">
-                  <Image
-                    src={"/icons/sold.png"}
-                    alt="Cars&Cars"
-                    width={80}
-                    height={60}
-                  />
-                </div>
-              )}
+            {car && car.is_active === "0" && (
+              <div className="overlay-icon">
+                <Image
+                  src={"/icons/sold.png"}
+                  alt="Cars&Cars"
+                  width={80}
+                  height={60}
+                />
+              </div>
+            )}
 
-              {/** ************* **/}
-            </div>
+            {/** ************* **/}
           </div>
-          <div className="text">
-            <h2>{car.brand + " " + car.model}</h2>
-            <div className="car-engine-wrapper">
-              <small>{car.variant}</small>
-              <div className="vertical-hr"></div>
-              <small>{car.bodyType}</small>
-            </div>
+        </div>
+        <div className="text">
+          <h2>{car.brand + " " + car.model}</h2>
+          <div className="car-engine-wrapper">
+            <small>{car.variant}</small>
+            <div className="vertical-hr"></div>
+            <small>{car.bodyType}</small>
+          </div>
 
-            <div className="price-container">
-              <p className="distance">
-                <IoSpeedometerOutline className="icon" />{" "}
-                {car.kilometerDriven || 999} Kms
-              </p>
-              <div className="vertical-hr"></div>
-              <p className="price">
-                <span>₹ </span> {car.price}
-              </p>
-            </div>
+          <div className="price-container">
+            <p className="distance">
+              <IoSpeedometerOutline className="icon" />{" "}
+              {car.kilometerDriven || 999} Kms
+            </p>
+            <div className="vertical-hr"></div>
+            <p className="price">
+              <span>₹ </span> {car.price}
+            </p>
           </div>
-          <div className="specs">
-            <small>
-              <GiGearStick className="icon" /> {car.fuelType}
-            </small>
-            <p>View Details</p>
-          </div>
-        </a>
+        </div>
+        <div className="specs">
+          <small>
+            <GiGearStick className="icon" /> {car.fuelType}
+          </small>
+          <p>View Details</p>
+        </div>
       </Link>
     </>
   );

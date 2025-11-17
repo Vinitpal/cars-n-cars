@@ -14,7 +14,8 @@ const Banner = () => {
             className="img"
             src="/images/services/banner-image.png"
             alt="Cars&Cars"
-            layout="fill"
+            width={800}
+            height={400}
           />
         </div>
       </div>

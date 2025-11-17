@@ -37,8 +37,8 @@ const OtpVerifyComponent = () => {
       <div className="header">
         <h2>OTP Verification</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
           </Link>
           <span>{">"}</span>
           <Link href="/auth/OtpVerify">Verify OTP</Link>

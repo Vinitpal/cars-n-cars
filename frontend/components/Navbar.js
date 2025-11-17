@@ -77,21 +77,20 @@ const Navbar = () => {
       {/******** Desktop Navbar ********/}
       <div className="navbar-desktop">
         <Link href="/">
-          <a>
-            <div
-              className="image-container"
-              style={{ width: "120px" }}
-              onClick={() => dispatch(setStartSearch(false))}
-            >
-              <Image
-                className="img"
-                src={"/images/logo.png"}
-                alt="Cars&Cars"
-                layout="fill"
-                priority={true}
-              />
-            </div>
-          </a>
+          <div
+            className="image-container"
+            style={{ width: "120px" }}
+            onClick={() => dispatch(setStartSearch(false))}
+          >
+            <Image
+              className="img"
+              src={"/images/logo.png"}
+              width={120}
+              height={120}
+              alt="Cars&Cars"
+              priority={true}
+            />
+          </div>
         </Link>
         <div
           className="searchBar"
@@ -113,20 +112,14 @@ const Navbar = () => {
             dispatch(setClearFilter(true));
           }}
         >
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/usedCars">
-            <a>Used Car</a>
-          </Link>
+          <Link href="/">Home</Link>
+          <Link href="/usedCars">Used Car</Link>
           {/*
           <Link href="/usedBikes">
             <a>Used Bike</a>
           </Link>
           */}
-          <Link href="/services">
-            <a>Services</a>
-          </Link>
+          <Link href="/services">Services</Link>
           <a href={`${api_path}/admin`} className="login-link">
             <button className="login-btn">Login</button>
           </a>
@@ -148,24 +141,23 @@ const Navbar = () => {
       {/******** Mobile Navbar ********/}
       <div className="navbar-mobile">
         <Link href="/">
-          <a>
-            <div className="image-container" style={{ width: "120px" }}>
-              <Image
-                className="img"
-                src={"/images/logo.png"}
-                alt="Cars&Cars"
-                layout="fill"
-                priority={true}
-              />
-            </div>
-          </a>
+          <div className="image-container" style={{ width: "120px" }}>
+            <Image
+              className="img"
+              src={"/images/logo.png"}
+              width={120}
+              height={120}
+              alt="Cars&Cars"
+              priority={true}
+            />
+          </div>
         </Link>
 
         <div className="menu-btn">
           {!visible && <FiMenu className="icon" onClick={showDrawer} />}
         </div>
 
-        <Drawer placement="right" onClose={onClose} visible={visible}>
+        <Drawer placement="right" onClose={onClose} open={visible}>
           <div
             className="links"
             onClick={() => {
@@ -174,15 +166,11 @@ const Navbar = () => {
               setVisible(false);
             }}
           >
-            <Link href="/">
-              <a onClick={() => setVisible(false)}>
-                <AiOutlineHome className="icon" /> Home
-              </a>
+            <Link href="/" onClick={() => setVisible(false)}>
+              <AiOutlineHome className="icon" /> Home
             </Link>
             <Link href="/usedCars">
-              <a>
-                <AiOutlineCar className="icon" /> Used Car
-              </a>
+              <AiOutlineCar className="icon" /> Used Car
             </Link>
             {/*
             <Link href="/usedBikes">
@@ -192,17 +180,13 @@ const Navbar = () => {
               </a>
             </Link>
           */}
-            <Link href="/service">
-              <a onClick={() => setVisible(false)}>
-                <AiOutlineTool className="icon" />
-                Services
-              </a>
+            <Link href="/service" onClick={() => setVisible(false)}>
+              <AiOutlineTool className="icon" />
+              Services
             </Link>
-            <Link href="/blog">
-              <a onClick={() => setVisible(false)}>
-                <AiOutlineBook className="icon" />
-                Blog
-              </a>
+            <Link href="/blog" onClick={() => setVisible(false)}>
+              <AiOutlineBook className="icon" />
+              Blog
             </Link>
           </div>
 

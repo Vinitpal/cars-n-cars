@@ -1,8 +1,14 @@
-@import "./commonCSS/common.scss", "./footerCSS/footer.scss",
-  "./homeCSS/home.scss", "./navbarCSS/navbar.scss", "./cardsCSS/cards.scss",
-  "./shopCSS/shop.scss", "./sellYourCarCSS/sell-your-car.scss",
-  "./authCSS/auth.scss", "./serviceCSS/service.scss", "./blogCSS/blog-page.scss",
-  "./tncCSS/tnc.scss";
+@use "./commonCSS/common.scss";
+@use "./footerCSS/footer.scss";
+@use "./homeCSS/home.scss";
+@use "./navbarCSS/navbar.scss";
+@use "./cardsCSS/cards.scss";
+@use "./shopCSS/shop.scss";
+@use "./sellYourCarCSS/sell-your-car.scss";
+@use "./authCSS/auth.scss";
+@use "./serviceCSS/service.scss";
+@use "./blogCSS/blog-page.scss";
+@use "./tncCSS/tnc.scss";
 
 * {
   box-sizing: border-box;

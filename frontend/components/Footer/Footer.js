@@ -35,7 +35,8 @@ const Footer = () => {
               className="img"
               src={"/images/logoWhite.png"}
               alt="Cars&Cars"
-              layout="fill"
+              width={150}
+              height={150}
             />
           </div>
         </div>
@@ -47,9 +48,7 @@ const Footer = () => {
               <ul>
                 {[...item.links].map((link, idx) => (
                   <li key={idx}>
-                    <Link href={link.route} passHref>
-                      <a>{link.title}</a>
-                    </Link>
+                    <Link href={link.route}>{link.title}</Link>
                   </li>
                 ))}
               </ul>

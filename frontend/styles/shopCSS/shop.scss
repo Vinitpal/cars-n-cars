@@ -1,7 +1,8 @@
-@import "./filter-container.scss";
-@import "./shop-container.scss";
-@import "./product-detail.scss";
-@import "./brand-cards-container.scss";
+@use "../commonCSS/common.scss" as *;
+@use "./filter-container.scss" as *;
+@use "./shop-container.scss" as *;
+@use "./product-detail.scss" as *;
+@use "./brand-cards-container.scss" as *;
 
 .shop {
   > .header {

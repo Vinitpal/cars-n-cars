@@ -37,7 +37,7 @@ const Menu = () => {
               className="img"
               src="/images/hatchback.jpg"
               alt="Cars&Cars"
-              layout="fill"
+               
             />
         </div>*/}
           <small>{car.bt_name}</small>

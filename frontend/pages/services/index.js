@@ -23,15 +23,13 @@ const index = () => {
       <div className="header">
         <h2>Car Wash Packages / Plan</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
           </Link>
 
           <span>{">"}</span>
 
-          <Link href="/services">
-            <a>Services</a>
-          </Link>
+          <Link href="/services">Services</Link>
         </div>
       </div>
 
@@ -45,15 +43,13 @@ const index = () => {
       <div className="header">
         <h2>Car Polish Packages / Plan</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
           </Link>
 
           <span>{">"}</span>
 
-          <Link href="/services">
-            <a>Services</a>
-          </Link>
+          <Link href="/services">Services</Link>
         </div>
       </div>
 

@@ -1,3 +1,7 @@
+@use "../../commonCSS/common.scss" as *;
+@use "./seller-detail-cta.scss" as *;
+
+
 // -------- car info title start --------
 .product-detail-container {
   .car-info {
@@ -227,6 +231,4 @@
     }
   }
 }
-
-@import "./seller-detail-cta.scss";
 // -------- car info cta btns end --------

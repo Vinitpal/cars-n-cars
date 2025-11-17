@@ -31,8 +31,8 @@ const QuickFooterLinks = () => {
   </div>*/}
 
       <div className="copyright">
-        <Link href="/">
-          <a style={{ color: "inherit" }}>Cars & Cars</a>
+        <Link href="/" style={{ color: "inherit" }}>
+          Cars & Cars
         </Link>{" "}
         Made with {"<3"} by{" "}
         <a

@@ -187,20 +187,20 @@ const Shop = () => {
       <div className="header">
         <h2>Latest Used Cars</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
+          </Link>
+
+          <span>{">"}</span>
+
+          <Link href="/usedCars" className="active">
+            Used Cars
           </Link>
 
           <span>{">"}</span>
 
           <Link href="/usedCars">
-            <a className="active">Used Cars</a>
-          </Link>
-
-          <span>{">"}</span>
-
-          <Link href="/usedCars">
-            <a>{location === "All" ? "All Cars" : `Cars in ${location}`}</a>
+            {location === "All" ? "All Cars" : `Cars in ${location}`}
           </Link>
         </div>
       </div>

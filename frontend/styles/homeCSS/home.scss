@@ -1,6 +1,6 @@
-@import "./mobile-banner.scss";
-@import "./desktop-banner.scss";
-@import "./featured-cards-container.scss";
-@import "./topbar-icons.scss";
-@import "./ask-for-location.scss";
-@import "./search-container.scss";
+@use "./mobile-banner.scss" as *;
+@use "./desktop-banner.scss" as *;
+@use "./featured-cards-container.scss" as *;
+@use "./topbar-icons.scss" as *;
+@use "./ask-for-location.scss" as *;
+@use "./search-container.scss" as *;

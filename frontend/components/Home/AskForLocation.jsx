@@ -138,8 +138,8 @@ const AskForLocation = () => {
               >
                 <Image
                   src={"/icons/pin.png"}
-                  width={"12px"}
-                  height={"12px"}
+                  width={12}
+                  height={12}
                   alt={city.l_name}
                   className={"icon"}
                 />

@@ -78,25 +78,24 @@ const Product = ({ productData }) => {
               </h2>
 
               <div className="breadcrumb">
-                <Link href="/">
-                  <a className="active">Home</a>
+                <Link href="/" className="active">
+                  Home
                 </Link>
 
                 <span>{">"}</span>
 
-                <Link href="/usedBikes">
-                  <a className="active">Used Bikes</a>
+                <Link href="/usedBikes" className="active">
+                  Used Bikes
                 </Link>
 
                 <span>{">"}</span>
 
-                <Link href="/usedBikes">
-                  <a
-                    className="active"
-                    onClick={() => dispatch(setLocation(productData.location))}
-                  >
-                    {"Bikes in " + productData.location}
-                  </a>
+                <Link
+                  href="/usedBikes"
+                  className="active"
+                  onClick={() => dispatch(setLocation(productData.location))}
+                >
+                  {"Bikes in " + productData.location}
                 </Link>
 
                 <span>{">"}</span>
@@ -106,7 +105,7 @@ const Product = ({ productData }) => {
                     productData.brand + "_" + productData.model
                   }?id=${productData._id}`}
                 >
-                  <a>{productData.brand + " " + productData.model}</a>
+                  {productData.brand + " " + productData.model}
                 </Link>
               </div>
             </div>

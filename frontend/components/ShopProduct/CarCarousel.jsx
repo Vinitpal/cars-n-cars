@@ -34,9 +34,10 @@ const CarCarousel = ({ productData }) => {
                 <Image
                   className="img"
                   alt="Cars&Cars"
-                  layout="fill"
                   loader={() => getImgSrc(id)}
                   src={getImgSrc(id) || "/images/bannerCar.webp"}
+                  width={800}
+                  height={600}
                   priority={true}
                 />
               </div>

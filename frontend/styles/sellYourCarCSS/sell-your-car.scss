@@ -1,6 +1,7 @@
-@import "./seller-form.scss";
-@import "./car-detail-form.scss";
-@import "./submitted.scss";
+@use "../commonCSS/common.scss" as *;
+@use "./seller-form.scss" as *;
+@use "./car-detail-form.scss" as *;
+@use "./submitted.scss" as *;
 .sell-your-car {
   margin: 2rem 0;
   padding: 1rem 2rem;

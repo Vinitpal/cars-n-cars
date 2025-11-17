@@ -1,3 +1,21 @@
+@use "../commonCSS/common.scss" as *;
+// -------- car info start --------
+@use "./productDetail/car-info.scss" as *;
+// -------- car info end --------
+
+// -------- cta btns start --------
+@use "./productDetail/cta-btns.scss" as *;
+// -------- cta btns end --------
+
+// -------- product detail second section start --------
+@use "./productDetail/second-section.scss" as *;
+// -------- product detail second section end --------
+
+// -------- ant design changes start  --------
+@use "./productDetail/antd-changes.scss" as *;
+// -------- ant design changes end  --------
+
+
 .product-detail {
   display: block !important;
 
@@ -148,18 +166,3 @@
   }
 }
 
-// -------- car info start --------
-@import "./productDetail/car-info.scss";
-// -------- car info end --------
-
-// -------- cta btns start --------
-@import "./productDetail/cta-btns.scss";
-// -------- cta btns end --------
-
-// -------- product detail second section start --------
-@import "./productDetail/second-section.scss";
-// -------- product detail second section end --------
-
-// -------- ant design changes start  --------
-@import "./productDetail/antd-changes.scss";
-// -------- ant design changes end  --------

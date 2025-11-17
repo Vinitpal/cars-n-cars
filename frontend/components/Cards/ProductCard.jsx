@@ -36,74 +36,74 @@ const ProductCard = ({ car, sliderClassName, url }) => {
   // <Link href={`/usedCars/${car.title}`} passHref>
   return (
     <>
-      <Link href={url || "/"} passHref>
-        <a
-          className={`product-card ${sliderClassName} ${
-            car.is_active === "0" && "disabled-link"
-          }`}
-        >
-          {/* Image */}
-          <div className="image-container" style={{ width: "100%" }}>
-            <Image
-              loader={() => imgSrc}
-              src={imgSrc || "carsNcars.png"}
-              alt="Cars&Cars"
-              layout="fill"
-              loading="lazy"
-              blurDataURL="/images/bannerCar.webp"
-              placeholder="blur"
-            />
-            {car && car.is_active === "0" && (
-              <div className="overlay-icon">
-                <Image
-                  src={"/icons/sold.png"}
-                  alt="Cars&Cars"
-                  width={80}
-                  height={60}
-                />
-              </div>
-            )}
-            {/** ************* **/}
-            {car.verified && <MdVerified className="icon" />}
+      <Link
+        href={url || "/"}
+        className={`product-card ${sliderClassName} ${
+          car.is_active === "0" && "disabled-link"
+        }`}
+      >
+        {/* Image */}
+        <div className="image-container" style={{ width: "100%" }}>
+          <Image
+            loader={() => imgSrc}
+            src={imgSrc || "/images/logo.png"}
+            alt="Cars&Cars"
+            width={400}
+            height={210}
+            loading="lazy"
+            blurDataURL="/images/bannerCar.webp"
+            placeholder="blur"
+          />
+          {car && car.is_active === "0" && (
+            <div className="overlay-icon">
+              <Image
+                src={"/icons/sold.png"}
+                alt="Cars&Cars"
+                width={80}
+                height={60}
+              />
+            </div>
+          )}
+          {/** ************* **/}
+          {car.verified && <MdVerified className="icon" />}
+        </div>
+
+        <div className="text">
+          <h2>{car.brand + " " + car.model}</h2>
+          <div className="car-engine-wrapper">
+            <small>{car.variant}</small>
+            <div className="vertical-hr"></div>
+            <small>{car.bodyType}</small>
           </div>
 
-          <div className="text">
-            <h2>{car.brand + " " + car.model}</h2>
-            <div className="car-engine-wrapper">
-              <small>{car.variant}</small>
-              <div className="vertical-hr"></div>
-              <small>{car.bodyType}</small>
-            </div>
-
-            <div className="price-container">
-              <p className="distance">
-                <IoSpeedometerOutline className="icon" />
-                {car.kilometerDriven || 999} Kms
-              </p>
-              <div className="vertical-hr"></div>
-              <p className="price">
-                <span>₹ </span> {car.price}
-              </p>
-            </div>
+          <div className="price-container">
+            <p className="distance">
+              <IoSpeedometerOutline className="icon" />
+              {car.kilometerDriven || 999} Kms
+            </p>
+            <div className="vertical-hr"></div>
+            <p className="price">
+              <span>₹ </span> {car.price}
+            </p>
           </div>
-          <div className="specs">
-            <small>
-              <GiGearStick className="icon" /> {car.fuelType}
-            </small>
-            <small>
-              <MdOutlineVerifiedUser className="icon" />
-              Insurance : {car.insurance ? "Yes" : "No"}
-            </small>
-            <small>
-              <VscSymbolColor className="icon" />
-              Color : {car.color}
-            </small>
-            <small>
-              <AiOutlineCar className="icon" />
-              {car.owner || "1st"} Owner
-            </small>
-          </div>
-        </a>
+        </div>
+        <div className="specs">
+          <small>
+            <GiGearStick className="icon" /> {car.fuelType}
+          </small>
+          <small>
+            <MdOutlineVerifiedUser className="icon" />
+            Insurance : {car.insurance ? "Yes" : "No"}
+          </small>
+          <small>
+            <VscSymbolColor className="icon" />
+            Color : {car.color}
+          </small>
+          <small>
+            <AiOutlineCar className="icon" />
+            {car.owner || "1st"} Owner
+          </small>
+        </div>
       </Link>
     </>
   );

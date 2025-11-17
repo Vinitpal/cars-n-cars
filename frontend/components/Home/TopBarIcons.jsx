@@ -33,12 +33,7 @@ const TopBarIcons = () => {
           <div key={item.id} className="icon">
             <div className="nav-link">
               <div className="image-container">
-                <Image
-                  className="img"
-                  src={item.img}
-                  alt="Cars&Cars"
-                  layout="fill"
-                />
+                <Image className="img" src={item.img} alt="Cars&Cars" width={25} height={25} />
               </div>
             </div>
             <p>{item.title}</p>

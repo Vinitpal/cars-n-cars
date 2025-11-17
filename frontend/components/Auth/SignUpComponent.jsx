@@ -42,8 +42,8 @@ const SignUpComponent = () => {
       <div className="header">
         <h2>Register Here</h2>
         <div className="breadcrumb">
-          <Link href="/">
-            <a className="active">Home</a>
+          <Link href="/" className="active">
+            Home
           </Link>
           <span>{">"}</span>
           <Link href="/auth/SignUp">Sign Up</Link>
